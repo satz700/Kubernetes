@@ -1,0 +1,25 @@
+fruits:
+  red:
+    - strawberry
+    - grapes
+    - watermelon
+  
+  orange:
+    - orange
+
+  yellow:
+    - banana
+  
+  total: 5
+
+vegs:
+  red:
+    - tomato
+    - peppers
+  
+  green:
+    - brocoli
+    - cabbage
+    - lettuce
+  
+  total: 5
