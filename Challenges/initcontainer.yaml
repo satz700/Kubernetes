@@ -22,7 +22,7 @@ spec:
     spec:
       initContainers:
       - name: demo
-        image:  helo-world
+        image:  hello-world
         # Init containers are exactly like regular containers, except:
           # - Init containers always run to completion.
           # - Each init container must complete successfully before the next one starts.
