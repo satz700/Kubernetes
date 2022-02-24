@@ -64,3 +64,7 @@ sudo apt-mark hold kubelet kubeadm kubectl
 sudo systemctl enable kubelet
 
 sudo hostnamectl set-hostname $1
+
+#mkdir -p $HOME/.kube
+#sudo cp -f /etc/kubernetes/admin.conf $HOME/.kube/config
+#sudo chown $(id -u):$(id -g) $HOME/.kube/config
