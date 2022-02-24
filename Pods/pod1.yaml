@@ -15,7 +15,7 @@ spec:
           protocol: TCP
       volumeMounts:
          - name: local
-           mountPath: /etc/nginx
+           mountPath: /var/log//nginx
   volumes:
     - name: local
       emptyDir: {}
