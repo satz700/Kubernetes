@@ -68,3 +68,13 @@ sudo hostnamectl set-hostname $1
 #mkdir -p $HOME/.kube
 #sudo cp -f /etc/kubernetes/admin.conf $HOME/.kube/config
 #sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+#Install the Calico Network Add-On
+
+#sudo kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+
+#(or)
+
+#Install the Flannel Network Add-On
+
+#sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
