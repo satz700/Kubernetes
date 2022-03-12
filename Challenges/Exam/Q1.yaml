@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis
+  labels:
+    app: redis
+spec:
+  containers:
+    - name: redis
+      image: redis
+      env:
+        - name: MARRIAGE_STATUS
+          valueFrom:
+            configMapKeyRef:
+              name: myconfig
+              key: STATUS
+      volumeMounts:
+        - name: local
+          mountPath: /opt/redis-config/test
+        - name: redis-config
+          mountPath: /opt/redis-config
+        - name: config
+          mountPath: /var/sathiya.conf
+          subPath: sathiya.conf
+  volumes:
+    - name: redis-config
+      configMap:
+        name: redis-config
+        items:
+          - key: redis
+            path: redis.conf
+    - name: local
+      hostPath:
+        path: /home/cloud_user/test
+    - name: config
+      configMap: 
+        name: myconfig
+        items:
+          - key: STATUS
+            path: sathiya.conf
