@@ -10,9 +10,14 @@ spec:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   storageClassName: slow
-  mountOptions:
-    - hard
-    - nfsvers=4.1
-  nfs:
-    path: /tmp
-    server: 172.17.0.2
+  local:
+    path: /opt/mypv
+  nodeAffinity:
+    required:     
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: env
+                operator: In
+                values:
+                  - dev
+
