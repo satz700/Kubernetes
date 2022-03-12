@@ -9,6 +9,10 @@ spec:
   containers:
     - name: myweb
       image: nginx:latest
+      resources:
+        limits:
+          cpu: 200m
+          memory: 500Mi
       ports:
         - name: http
           containerPort: 80
@@ -19,3 +23,4 @@ spec:
   volumes:
     - name: local
       emptyDir: {}
+    - name: redis-volume

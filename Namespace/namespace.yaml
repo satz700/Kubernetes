@@ -3,7 +3,7 @@ kind: Namespace
 metadata:
   name: env-prod
 
-----
+-----
 
 apiVersion: v1
 kind: Namespace
