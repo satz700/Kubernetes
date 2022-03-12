@@ -7,6 +7,10 @@ spec:
   containers:
     - name: nginx
       image: nginx
+      resources:
+        limits:
+          cpu: 200m
+          memory: 200Mi
       volumeMounts:
         - name: localpv
           mountPath: /opt

@@ -7,6 +7,10 @@ spec:
   containers:
     - name: redis
       image: redis
+      resources:
+        limits:
+          cpu: 200m
+          memory: 200Mi
       envFrom:
         - configMapRef: 
             name: myconfig
